@@ -10,6 +10,8 @@ import { Route, RouterModule } from '@angular/router';
 import { RegistersService } from './services/registers.service';
 import { HttpClientModule } from  '@angular/common/http';
 import { LoginComponent } from './login/login.component';
+import { VideosCrudComponent } from './videos-crud/videos-crud.component';
+import { VideoDetailComponent } from './video-detail/video-detail.component';
 
 const routes:Route[] = [
   {path: '', component: AppComponent},
@@ -21,6 +23,8 @@ const routes:Route[] = [
   declarations: [
     AppComponent,
     LoginComponent,
+    VideosCrudComponent,
+    VideoDetailComponent,
     RegisterComponent
   ],
   imports: [

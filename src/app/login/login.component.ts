@@ -8,21 +8,24 @@ import { LoginService } from '../services/login.service';
 })
 export class LoginComponent implements OnInit {
 
-  email: string;
-  password: string;
 
+    email: string;
+    password: string;
+  
 
   constructor(private service: LoginService) { }
 
   ngOnInit() {
   }
+  
+  onSubmit(){}
 
-  login() {
-    this.service.login(this.email, this.password)
+  //login() {
+    //this.service.login()
     //.subscribe(res => {
       //let data = res. json();
       //localStorage.setItem('token', data.token);
     //});
-  }
+  //}
 
 }

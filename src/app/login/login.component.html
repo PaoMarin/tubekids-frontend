@@ -1,24 +1,17 @@
-<div class="container">
-    <h1>
-        Welcome to {{ title }}!
-      </h1>
-      <br>
-      <br>
-      <h2>First register in the form</h2>
-      <br>
-      <br>
-  <div class="form-inline">
-    <label>Email:</label>
-    <input class="form-control" type="email" placeholder="Email here..." [(ngModel)]="email">
-    <label>Password:</label>
-    <input class="form-control" type="password" placeholder="Secure pwd here..." [(ngModel)]="password">
+<div class="card-header">Login</div>
+<div class="card-body">
+  <form>
     <div class="form-group">
-        <label>Confirm Password</label>
-        <input type="password" class="form-control"placeholder="Password">
-      </div>
-    <button class="btn btn-primary"(click)="login()">
-      <i class="fa fa-floppy-o" aria-hidden="true"></i>
-      Login
-    </button>
-  </div>
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" name ="login" class="form-control" id="exampleInputEmail1" 
+        aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="email" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" name ="password" class="form-control" id="exampleInputPassword1" placeholder="Password" [(ngModel)]="password" required>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!login.validate" (click)="login()">Submit</button>
+  </form>
+  <br>
+  <a class="btn btn-primary" href="/register"  role="button">Sign up</a>
 </div>

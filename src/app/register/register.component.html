@@ -1,50 +1,39 @@
-<div style="text-align:center">
-    <h1>
-      Tubekids!
-    </h1>
-    <br>
-     <h2>First register in the app</h2>
-     <br>
-     <form action="">
-        <div style="text-align:left">
-        <div class="form-group" >
-          <label>Email address</label>
-          <input type="email" class="form-control" placeholder="Enter email" [(ngModel)]="email">
-        </div>
-        <div *ngIf="password1==password2">
+<h1>Tubekids!</h1>
+<div class="card-header">First register in the app</div>
+<div class="card-body">
+  <form>
           <div class="form-group">
-            <label>Password</label>
-            <input type="password" class="form-control" placeholder="Enter Password (8 digits min)" id="password1" [(ngModel)]="password">
+            <label>Email address</label>
+            <input type="email" name="email" class="form-control" placeholder="Enter email" [(ngModel)]="email" required>
           </div>
           <div class="form-group">
-            <label>Confirm Password</label>
-            <input type="password" class="form-control"placeholder="Confirm Password" id="password2">
+              <label>Password</label>
+              <input type="password" name="password" class="form-control" placeholder="Enter Password (8 digits min)" id="password1" [(ngModel)]="password" required>
           </div>
-        </div>
-        <div class="form-group" >
-          <label>Name</label>
-          <input type="name" class="form-control" placeholder="Enter Name" [(ngModel)]="name">
-        </div>
-        <div class="form-group" >
-          <label>Last name</label>
-          <input type="lastname" class="form-control" placeholder="Enter Last name" [(ngModel)]="last_name">
-        </div>
-        <div class="form-group" >
-          <label>Country</label>
-          <input type="country" class="form-control" placeholder="Enter country" [(ngModel)]="country">
-        </div>
-        <div class="form-group" >
-          <label>Birthdate</label>
-          <input type="date" class="form-control" placeholder="Enter Birthdate" [(ngModel)]="birth_date">
-        </div>
-        <div class="form-group" >
-          <label>Phone number</label>
-          <input type="number" class="form-control" placeholder="phonenumber"[(ngModel)]="phone_number">
-        </div>
-        <button type="submit" class="btn btn-primary" [disabled]="!register.validate"(click)="register()">
-        <i class="fa fa-floppy-o" aria-hidden="true"></i>
-        Submit</button>
-    
-    </div>
-</form>
-
+          <div class="form-group">
+              <label>Confirm Password</label>
+              <input type="password" name="password" class="form-control"placeholder="Confirm Password" id="password2" required>
+          </div>
+          <div class="form-group" >
+            <label>Name</label>
+            <input type="name" name="name" class="form-control" placeholder="Enter Name" [(ngModel)]="name" required>
+          </div>
+          <div class="form-group" >
+            <label>Last name</label>
+            <input type="lastname" name="lastname" class="form-control" placeholder="Enter Last name" [(ngModel)]="last_name" required>
+          </div>
+          <div class="form-group" >
+            <label>Country</label>
+            <input type="country" name="country" class="form-control" placeholder="Enter country" [(ngModel)]="country" >
+          </div>
+          <div class="form-group" >
+            <label>Birthdate</label>
+            <input type="date" name="date" class="form-control" placeholder="Enter Birthdate" [(ngModel)]="birth_date" required>
+          </div>
+          <div class="form-group" >
+            <label>Phone number</label>
+            <input type="number" name="number" class="form-control" placeholder="phonenumber"[(ngModel)]="phone_number" required> 
+          </div>
+          <button type="submit" class="btn btn-primary" (click)="register()">Submit</button>
+  </form>
+</div>
